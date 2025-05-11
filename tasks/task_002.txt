@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Create Landing Page Layout and Hero Section
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Implement the main landing page with hero section following the Stoic-gladiator × AI wizard brand voice.
+# Details:
+Create page.tsx in the app directory with a responsive hero section. Use Tailwind for styling with the dark stone background. Include the main slogan and brand messaging. Ensure the layout is mobile-friendly and maintains the brand voice. Add a container for the signup form (to be implemented in the next task).
+
+# Test Strategy:
+Manually verify the page renders correctly on different screen sizes. Check that the brand voice is consistent and the design matches the dark gladiator palette.

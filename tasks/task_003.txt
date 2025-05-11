@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: Implement Email Signup Form
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: Create the email capture form on the landing page with basic client-side validation.
+# Details:
+Add a form to the landing page with an email input field and submit button. Implement basic client-side validation using HTML5 validation attributes. Style the form using Tailwind classes to match the overall design. Set the form action to POST to the /api/subscribe endpoint (to be created later).
+
+# Test Strategy:
+Test form submission with valid and invalid email formats to verify client-side validation works correctly.

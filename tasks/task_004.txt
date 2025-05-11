@@ -1,0 +1,11 @@
+# Task ID: 4
+# Title: Add Honeypot Field for Spam Prevention
+# Status: pending
+# Dependencies: 3
+# Priority: medium
+# Description: Implement a hidden honeypot field to prevent spam submissions.
+# Details:
+Add a hidden input field to the form that should remain empty (honeypot). Style it to be invisible to users but accessible to bots. This field will be checked on the server to identify spam submissions. Also implement a simple regex email validation pattern as an additional layer of validation.
+
+# Test Strategy:
+Verify the honeypot field is properly hidden in the UI but present in the DOM. Test that the form can still be submitted when the honeypot field is empty.

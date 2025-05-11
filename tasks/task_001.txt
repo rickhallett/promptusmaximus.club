@@ -1,0 +1,11 @@
+# Task ID: 1
+# Title: Initialize Next.js 14 Project with Tailwind CDN
+# Status: done
+# Dependencies: None
+# Priority: high
+# Description: Set up a new Next.js 14 project with TypeScript, App Router, and integrate Tailwind CSS via CDN.
+# Details:
+Run `npx create-next-app promptus-maximus --ts --app --eslint`. Remove unused boilerplate code. Add Tailwind CSS via CDN by adding the link tag to the root layout.tsx file. Configure the dark gladiator color palette (stone-900 + amber-600) in a globals.css file.
+
+# Test Strategy:
+Verify the project structure is correct and Tailwind classes are working by adding a test component with Tailwind classes.

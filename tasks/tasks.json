@@ -1,0 +1,131 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Initialize Next.js 14 Project with Tailwind CDN",
+      "description": "Set up a new Next.js 14 project with TypeScript, App Router, and integrate Tailwind CSS via CDN.",
+      "status": "done",
+      "dependencies": [],
+      "priority": "high",
+      "details": "Run `npx create-next-app promptus-maximus --ts --app --eslint`. Remove unused boilerplate code. Add Tailwind CSS via CDN by adding the link tag to the root layout.tsx file. Configure the dark gladiator color palette (stone-900 + amber-600) in a globals.css file.",
+      "testStrategy": "Verify the project structure is correct and Tailwind classes are working by adding a test component with Tailwind classes."
+    },
+    {
+      "id": 2,
+      "title": "Create Landing Page Layout and Hero Section",
+      "description": "Implement the main landing page with hero section following the Stoic-gladiator × AI wizard brand voice.",
+      "status": "pending",
+      "dependencies": [
+        1
+      ],
+      "priority": "high",
+      "details": "Create page.tsx in the app directory with a responsive hero section. Use Tailwind for styling with the dark stone background. Include the main slogan and brand messaging. Ensure the layout is mobile-friendly and maintains the brand voice. Add a container for the signup form (to be implemented in the next task).",
+      "testStrategy": "Manually verify the page renders correctly on different screen sizes. Check that the brand voice is consistent and the design matches the dark gladiator palette."
+    },
+    {
+      "id": 3,
+      "title": "Implement Email Signup Form",
+      "description": "Create the email capture form on the landing page with basic client-side validation.",
+      "status": "pending",
+      "dependencies": [
+        2
+      ],
+      "priority": "high",
+      "details": "Add a form to the landing page with an email input field and submit button. Implement basic client-side validation using HTML5 validation attributes. Style the form using Tailwind classes to match the overall design. Set the form action to POST to the /api/subscribe endpoint (to be created later).",
+      "testStrategy": "Test form submission with valid and invalid email formats to verify client-side validation works correctly."
+    },
+    {
+      "id": 4,
+      "title": "Add Honeypot Field for Spam Prevention",
+      "description": "Implement a hidden honeypot field to prevent spam submissions.",
+      "status": "pending",
+      "dependencies": [
+        3
+      ],
+      "priority": "medium",
+      "details": "Add a hidden input field to the form that should remain empty (honeypot). Style it to be invisible to users but accessible to bots. This field will be checked on the server to identify spam submissions. Also implement a simple regex email validation pattern as an additional layer of validation.",
+      "testStrategy": "Verify the honeypot field is properly hidden in the UI but present in the DOM. Test that the form can still be submitted when the honeypot field is empty."
+    },
+    {
+      "id": 5,
+      "title": "Create API Route for Email Subscription",
+      "description": "Implement the serverless API route to handle form submissions and integrate with Resend.",
+      "status": "pending",
+      "dependencies": [
+        1
+      ],
+      "priority": "high",
+      "details": "Create an API route at app/api/subscribe/route.ts using Next.js App Router conventions. Implement the POST handler to validate form data (check email format and honeypot field). Install the Resend SDK with `npm install resend`. Use the SDK to add the email to a contact list. Return appropriate status codes (400 for invalid submissions, 302 redirect to /thanks for successful ones).",
+      "testStrategy": "Test the API route with various inputs: valid emails, invalid emails, and submissions with filled honeypot fields. Verify correct status codes are returned."
+    },
+    {
+      "id": 6,
+      "title": "Implement Thank You Page",
+      "description": "Create the 'Thanks' page with a Stoic quote and back button.",
+      "status": "pending",
+      "dependencies": [
+        2
+      ],
+      "priority": "medium",
+      "details": "Create a new page at app/thanks/page.tsx. Design the page with a thank you message, a Stoic quote (e.g., \"The impediment to action advances action.\" — Marcus Aurelius), and a button to return to the home page. Maintain the same styling and brand voice as the landing page.",
+      "testStrategy": "Verify the page renders correctly and the back button works. Ensure the styling is consistent with the landing page."
+    },
+    {
+      "id": 7,
+      "title": "Connect Form Submission to API Route",
+      "description": "Link the form submission to the API route and handle the redirect flow.",
+      "status": "pending",
+      "dependencies": [
+        3,
+        5,
+        6
+      ],
+      "priority": "high",
+      "details": "Update the form to properly submit to the /api/subscribe endpoint. Handle form submission either through traditional form submission or using JavaScript to make a fetch request. Ensure the redirect to the Thanks page works correctly after successful submission. Add error handling to display validation errors to the user.",
+      "testStrategy": "Test the complete flow from form submission to redirect. Verify both successful submissions and error cases work as expected."
+    },
+    {
+      "id": 8,
+      "title": "Configure Vercel Environment Variables",
+      "description": "Set up the necessary environment variables for Resend integration.",
+      "status": "pending",
+      "dependencies": [
+        5
+      ],
+      "priority": "medium",
+      "details": "Create a .env.local file for local development with RESEND_API_KEY and RESEND_CONTACT_LIST variables. Document the process for setting these variables in Vercel's environment variable UI for production deployment. Update the API route to use these environment variables securely.",
+      "testStrategy": "Verify the API can access the environment variables correctly. Test the Resend integration with the configured API key and contact list."
+    },
+    {
+      "id": 9,
+      "title": "Deploy to Vercel and Configure Custom Domain",
+      "description": "Deploy the application to Vercel and set up the promptmaximus.club custom domain.",
+      "status": "pending",
+      "dependencies": [
+        7,
+        8
+      ],
+      "priority": "high",
+      "details": "Push the code to a GitHub repository. Connect the repository to Vercel for automatic deployment. Configure the build settings and environment variables in Vercel. Add the custom domain promptmaximus.club through Vercel's domain management. Set up any necessary DNS records.",
+      "testStrategy": "Verify the site is accessible at the custom domain. Test the complete user flow in the production environment to ensure everything works as expected."
+    },
+    {
+      "id": 10,
+      "title": "Optimize Performance and Run Lighthouse Tests",
+      "description": "Run Lighthouse tests and optimize the site to meet performance targets.",
+      "status": "pending",
+      "dependencies": [
+        9
+      ],
+      "priority": "medium",
+      "details": "Run Lighthouse tests on the deployed site. Identify and fix any performance issues, focusing on Cumulative Layout Shift (CLS) and Largest Contentful Paint (LCP). Optimize images, fonts, and any other assets. Implement any necessary fixes to achieve a Lighthouse score of ≥90 on mobile. Consider implementing Vercel Analytics or Plausible for visitor tracking if time permits.",
+      "testStrategy": "Run Lighthouse tests before and after optimizations to verify improvements. Check that TTFB is <100ms globally using Vercel Edge Network."
+    }
+  ],
+  "metadata": {
+    "projectName": "Promptus Maximus - Signal-Fire Landing",
+    "totalTasks": 10,
+    "sourceFile": "landing_prd.md",
+    "generatedAt": "2023-11-14"
+  }
+}

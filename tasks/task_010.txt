@@ -1,0 +1,11 @@
+# Task ID: 10
+# Title: Optimize Performance and Run Lighthouse Tests
+# Status: pending
+# Dependencies: 9
+# Priority: medium
+# Description: Run Lighthouse tests and optimize the site to meet performance targets.
+# Details:
+Run Lighthouse tests on the deployed site. Identify and fix any performance issues, focusing on Cumulative Layout Shift (CLS) and Largest Contentful Paint (LCP). Optimize images, fonts, and any other assets. Implement any necessary fixes to achieve a Lighthouse score of ≥90 on mobile. Consider implementing Vercel Analytics or Plausible for visitor tracking if time permits.
+
+# Test Strategy:
+Run Lighthouse tests before and after optimizations to verify improvements. Check that TTFB is <100ms globally using Vercel Edge Network.

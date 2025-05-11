@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: Create API Route for Email Subscription
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Implement the serverless API route to handle form submissions and integrate with Resend.
+# Details:
+Create an API route at app/api/subscribe/route.ts using Next.js App Router conventions. Implement the POST handler to validate form data (check email format and honeypot field). Install the Resend SDK with `npm install resend`. Use the SDK to add the email to a contact list. Return appropriate status codes (400 for invalid submissions, 302 redirect to /thanks for successful ones).
+
+# Test Strategy:
+Test the API route with various inputs: valid emails, invalid emails, and submissions with filled honeypot fields. Verify correct status codes are returned.

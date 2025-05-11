@@ -1,0 +1,11 @@
+# Task ID: 7
+# Title: Connect Form Submission to API Route
+# Status: pending
+# Dependencies: 3, 5, 6
+# Priority: high
+# Description: Link the form submission to the API route and handle the redirect flow.
+# Details:
+Update the form to properly submit to the /api/subscribe endpoint. Handle form submission either through traditional form submission or using JavaScript to make a fetch request. Ensure the redirect to the Thanks page works correctly after successful submission. Add error handling to display validation errors to the user.
+
+# Test Strategy:
+Test the complete flow from form submission to redirect. Verify both successful submissions and error cases work as expected.

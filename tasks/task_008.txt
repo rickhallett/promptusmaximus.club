@@ -1,0 +1,11 @@
+# Task ID: 8
+# Title: Configure Vercel Environment Variables
+# Status: pending
+# Dependencies: 5
+# Priority: medium
+# Description: Set up the necessary environment variables for Resend integration.
+# Details:
+Create a .env.local file for local development with RESEND_API_KEY and RESEND_CONTACT_LIST variables. Document the process for setting these variables in Vercel's environment variable UI for production deployment. Update the API route to use these environment variables securely.
+
+# Test Strategy:
+Verify the API can access the environment variables correctly. Test the Resend integration with the configured API key and contact list.

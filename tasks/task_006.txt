@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: Implement Thank You Page
+# Status: pending
+# Dependencies: 2
+# Priority: medium
+# Description: Create the 'Thanks' page with a Stoic quote and back button.
+# Details:
+Create a new page at app/thanks/page.tsx. Design the page with a thank you message, a Stoic quote (e.g., "The impediment to action advances action." — Marcus Aurelius), and a button to return to the home page. Maintain the same styling and brand voice as the landing page.
+
+# Test Strategy:
+Verify the page renders correctly and the back button works. Ensure the styling is consistent with the landing page.
