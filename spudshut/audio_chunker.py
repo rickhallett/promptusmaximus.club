@@ -33,9 +33,8 @@ from datetime import timedelta
 from pathlib import Path
 from typing import List, NoReturn
 
-from .utils import fatal, check_ffmpeg
+from .utils import fatal, check_ffmpeg, CHUNK_DEFAULT_SECS
 
-CHUNK_DEFAULT_SECS = 240  # 4 min
 DEFAULT_SAMPLE_RATE = 16_000
 DEFAULT_CHANNELS = 1
 CODEC_MAP = {

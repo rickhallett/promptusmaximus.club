@@ -30,3 +30,7 @@ def check_ffmpeg() -> None:
     """
     if shutil.which("ffmpeg") is None:
         fatal("FFmpeg executable not found – install it and ensure it's on PATH.")
+
+
+# Shared constants
+CHUNK_DEFAULT_SECS = 240  # Default chunk length in seconds (4 minutes)

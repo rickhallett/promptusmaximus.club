@@ -36,9 +36,7 @@ from datetime import timedelta
 from pathlib import Path
 from typing import List, NoReturn
 
-from .utils import fatal, check_ffmpeg  # Import from utils
-
-CHUNK_DEFAULT_SECS = 240  # 4 min
+from .utils import fatal, check_ffmpeg, CHUNK_DEFAULT_SECS  # Import from utils
 
 
 def build_ffmpeg_cmd(
