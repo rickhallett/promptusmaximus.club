@@ -1,6 +1,6 @@
 # Task ID: 6
 # Title: Implement Thank You Page
-# Status: pending
+# Status: done
 # Dependencies: 2
 # Priority: medium
 # Description: Create the 'Thanks' page with a Stoic quote and back button.

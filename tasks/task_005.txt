@@ -1,6 +1,6 @@
 # Task ID: 5
 # Title: Create API Route for Email Subscription
-# Status: pending
+# Status: done
 # Dependencies: 1
 # Priority: high
 # Description: Implement the serverless API route to handle form submissions and integrate with Resend.

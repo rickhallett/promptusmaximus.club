@@ -1,6 +1,6 @@
 # Task ID: 9
 # Title: Deploy to Vercel and Configure Custom Domain
-# Status: pending
+# Status: in-progress
 # Dependencies: 7, 8
 # Priority: high
 # Description: Deploy the application to Vercel and set up the promptmaximus.club custom domain.

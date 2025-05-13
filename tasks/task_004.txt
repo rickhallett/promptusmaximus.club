@@ -1,6 +1,6 @@
 # Task ID: 4
 # Title: Add Honeypot Field for Spam Prevention
-# Status: pending
+# Status: done
 # Dependencies: 3
 # Priority: medium
 # Description: Implement a hidden honeypot field to prevent spam submissions.

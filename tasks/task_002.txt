@@ -1,6 +1,6 @@
 # Task ID: 2
 # Title: Create Landing Page Layout and Hero Section
-# Status: pending
+# Status: done
 # Dependencies: 1
 # Priority: high
 # Description: Implement the main landing page with hero section following the Stoic-gladiator × AI wizard brand voice.

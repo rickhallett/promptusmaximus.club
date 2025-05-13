@@ -1,6 +1,6 @@
 # Task ID: 7
 # Title: Connect Form Submission to API Route
-# Status: pending
+# Status: done
 # Dependencies: 3, 5, 6
 # Priority: high
 # Description: Link the form submission to the API route and handle the redirect flow.

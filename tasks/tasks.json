@@ -14,7 +14,7 @@
       "id": 2,
       "title": "Create Landing Page Layout and Hero Section",
       "description": "Implement the main landing page with hero section following the Stoic-gladiator × AI wizard brand voice.",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         1
       ],
@@ -26,7 +26,7 @@
       "id": 3,
       "title": "Implement Email Signup Form",
       "description": "Create the email capture form on the landing page with basic client-side validation.",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         2
       ],
@@ -38,7 +38,7 @@
       "id": 4,
       "title": "Add Honeypot Field for Spam Prevention",
       "description": "Implement a hidden honeypot field to prevent spam submissions.",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         3
       ],
@@ -50,7 +50,7 @@
       "id": 5,
       "title": "Create API Route for Email Subscription",
       "description": "Implement the serverless API route to handle form submissions and integrate with Resend.",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         1
       ],
@@ -62,7 +62,7 @@
       "id": 6,
       "title": "Implement Thank You Page",
       "description": "Create the 'Thanks' page with a Stoic quote and back button.",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         2
       ],
@@ -74,7 +74,7 @@
       "id": 7,
       "title": "Connect Form Submission to API Route",
       "description": "Link the form submission to the API route and handle the redirect flow.",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         3,
         5,
@@ -88,7 +88,7 @@
       "id": 8,
       "title": "Configure Vercel Environment Variables",
       "description": "Set up the necessary environment variables for Resend integration.",
-      "status": "pending",
+      "status": "done",
       "dependencies": [
         5
       ],
@@ -100,7 +100,7 @@
       "id": 9,
       "title": "Deploy to Vercel and Configure Custom Domain",
       "description": "Deploy the application to Vercel and set up the promptmaximus.club custom domain.",
-      "status": "pending",
+      "status": "in-progress",
       "dependencies": [
         7,
         8

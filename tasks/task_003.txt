@@ -1,6 +1,6 @@
 # Task ID: 3
 # Title: Implement Email Signup Form
-# Status: pending
+# Status: done
 # Dependencies: 2
 # Priority: high
 # Description: Create the email capture form on the landing page with basic client-side validation.
