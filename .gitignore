@@ -41,3 +41,74 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large media files
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.flac
+*.aiff
+
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Specific directories with large files
+midnightgospels002-20250512_chunks/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtualenv
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Task Master specific (if not already covered)
+tasks/task-*.md
+scripts/task-complexity-report.json
+
+# Node specific
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # Usually committed, but can be ignored if preferred
+bun.lockb # Usually committed
+
+# OS specific
+.DS_Store
+Thumbs.db
