@@ -53,8 +53,14 @@ The goals are to reduce code duplication, simplify logic, and improve maintainab
 
 - **Description:** The `join_audio` function in `spudshut/audio_chunker.py` uses `ffmpeg -c copy`. Investigate if re-encoding is needed for robustness when chunk codecs/containers differ from the desired output.
 - **Files Affected:** `spudshut/audio_chunker.py`
-- **Priority:** Medium
-- **Status:** Pending
+- **Investigation Findings:**
+    - The primary target API (ElevenLabs) appears to be flexible with common input audio formats (e.g., MP3, WAV, FLAC, M4A).
+    - For direct file uploads, ElevenLabs likely performs its own transcoding if needed.
+    - A specific raw PCM format (`pcm_s16le_16`) is accepted for potentially lower latency.
+    - The current `-c copy` approach in `join_audio` is efficient and likely sufficient if the original chunk format is supported by the API.
+- **Decision:** No immediate code changes. The `-c copy` method will be retained for simplicity and speed. If compatibility issues arise or specific output formats are required for optimization in the future, this task can be revisited to implement transcoding capabilities.
+- **Priority:** N/A (Postponed)
+- **Status:** ✅ Investigated - No Action Needed Currently
 
 ## Other Observations
 
