@@ -75,9 +75,25 @@ def split_audio(infile: Path, outdir: Path, chunk: int, verbose: bool) -> None:
         print("[ffmpeg]", " ".join(cmd))
 
     try:
-        subprocess.run(cmd, check=True)
+        # Capture output and check for errors
+        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
     except subprocess.CalledProcessError as exc:
-        fatal(f"FFmpeg failed (exit {exc.returncode}). Rerun with ‑v for details.")
+        # Construct a detailed error message including stderr if available
+        error_message = f"FFmpeg command failed (exit code {exc.returncode})."
+        error_message += f"\nCommand: {' '.join(exc.cmd)}"
+        if exc.stderr:
+            error_message += f"\nFFmpeg stderr:\n{exc.stderr.strip()}"
+        else:
+            error_message += "\nFFmpeg stderr: (No output captured or empty)."
+        error_message += (
+            "\nTip: Rerun with -v for full FFmpeg log output during execution."
+        )
+        fatal(error_message)
+    except FileNotFoundError:
+        # Handle case where ffmpeg command itself is not found
+        fatal(
+            f"FFmpeg command not found. Ensure FFmpeg is installed and in your PATH. Command: {' '.join(cmd)}"
+        )
 
     # Count produced chunks
     chunks = sorted(outdir.glob(f"{infile.stem}_*{infile.suffix}"))
